@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import numpy as np
 # Load the trained model
-with open('Model_saving.pkl', 'rb') as f:
+with open('Save.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 
 # Streamlit App UI
@@ -43,4 +43,5 @@ if st.button("Predict Weight"):
     
     predicted_weight = loaded_model.predict(Input)
     st.success(f"Predicted Weight: {predicted_weight[0]:.2f} kg")
+
 
